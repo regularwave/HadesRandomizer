@@ -27,3 +27,7 @@ if (bluecb.checked == true) { totv += bluev };
 document.getElementById("text").innerHTML = numres;
 document.getElementById("num").innerHTML = totv;
 }
+
+function getrandtf() {
+  return Math.random() >= 0.5;
+}
