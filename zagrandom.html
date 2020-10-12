@@ -7,17 +7,53 @@
 
 <body>
 
-  <label class="switch">
-    <input type="checkbox" id="redcb" onclick="myFunction()">
-    <span class="slider"></span>
-  </label><br><br>
-
-  <label class="switch">
-    <input type="checkbox" id="bluecb" onclick="myFunction()">
-    <span class="slider"></span>
-  </label>
-
+  <button onclick="myFunction()">Go</button>
   <p id="text">test</p>
+  <fieldset>
+    <legend>Infernal Arms</legend>
+    <div>
+      Sword
+      <label><input type="checkbox" id="sword_zag" checked>Zagreus</label>
+      <label><input type="checkbox" id="sword_nem" checked>Nemesis</label>
+      <label><input type="checkbox" id="sword_pos" checked>Poseidon</label>
+      <label><input type="checkbox" id="sword_art" checked>Arthur</label>
+    </div>
+    <div>
+      Spear
+      <label><input type="checkbox" id="spear_zag" checked>Zagreus</label>
+      <label><input type="checkbox" id="spear_ach" checked>Achilles</label>
+      <label><input type="checkbox" id="spear_had" checked>Hades</label>
+      <label><input type="checkbox" id="spear_gua" checked>Guan Yu</label>
+    </div>
+    <div>
+      Shield
+      <label><input type="checkbox" id="shield_zag" checked>Zagreus</label>
+      <label><input type="checkbox" id="shield_cha" checked>Chaos</label>
+      <label><input type="checkbox" id="shield_zeu" checked>Zeus</label>
+      <label><input type="checkbox" id="shield_beo" checked>Beowulf</label>
+    </div>
+    <div>
+      Bow
+      <label><input type="checkbox" id="bow_zag" checked>Zagreus</label>
+      <label><input type="checkbox" id="bow_chi" checked>Chiron</label>
+      <label><input type="checkbox" id="bow_her" checked>Hera</label>
+      <label><input type="checkbox" id="bow_ram" checked>Rama</label>
+    </div>
+    <div>
+      Fists
+      <label><input type="checkbox" id="fists_zag" checked>Zagreus</label>
+      <label><input type="checkbox" id="fists_tal" checked>Talos</label>
+      <label><input type="checkbox" id="fists_dem" checked>Demeter</label>
+      <label><input type="checkbox" id="fists_gil" checked>Gilgamesh</label>
+    </div>
+    <div>
+      Rail
+      <label><input type="checkbox" id="rail_zag" checked>Zagreus</label>
+      <label><input type="checkbox" id="rail_eri" checked>Eris</label>
+      <label><input type="checkbox" id="rail_hes" checked>Hestia</label>
+      <label><input type="checkbox" id="rail_luc" checked>Lucifer</label>
+    </div>
+  </fieldset>
 
   <p id="num">0</p>
   <script type="text/javascript" src="zagrandom.js"></script>
