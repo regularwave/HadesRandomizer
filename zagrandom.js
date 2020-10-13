@@ -1,4 +1,4 @@
-function myFunction() {
+function randomize() {
 
   var weapons = [];
   var companion = [];
