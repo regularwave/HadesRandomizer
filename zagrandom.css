@@ -1,19 +1,15 @@
-/*.row {
-  display: flex;
-}*/
-
 body {
   background-color: #161616;
   color: #f1f1f1;
   font-family: sans-serif;
 }
 
-fieldset {
-  background-color: #292929;
+.prompt {
+  font-weight: bold;
 }
 
-legend {
-  font-weight: bold;
+.buttonright {
+  float: right;
 }
 
 @media screen and (prefers-color-scheme: light) {
@@ -32,4 +28,80 @@ legend {
   .column {
     width: 100%;
   }
+}
+
+.static label {
+  display:block;
+  background-color: #393939;
+  padding: 0.5rem;
+  height: auto;
+  line-height: auto;
+  border: 1px solid #bdbdbd;
+}
+.static p {
+  color: #f1f1f1;
+  padding: 0.5rem;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  text-align: left;
+  background-color: #292929;
+  margin: 0px;
+  border: 1px solid #eeeeee;
+}
+.accordion label {
+  display:block;
+  background-color: #393939;
+  padding: 0.5rem;
+  height: auto;
+  line-height: auto;
+  border: 1px solid #bdbdbd;
+}
+.accordion p {
+  color: #f1f1f1;
+  padding: 0.5rem;
+  font-size: 0.8em;
+  line-height: 1.7em;
+  opacity: 0;
+  display: none;
+  text-align: left;
+  background-color: #292929;
+  margin: 0px;
+  border: 1px solid #eeeeee;
+}
+
+input#paramtile {
+  display: none;
+  position: relative;
+}
+input#optionstile {
+  display: none;
+  position: relative;
+}
+#optionstile:checked ~ .hiddentext {
+  display: block;
+  opacity: 1;
+}
+#weaponstile:checked ~ .hiddentext {
+  display: block;
+  opacity: 1;
+}
+input#weaponstile {
+  display: none;
+  position: relative;
+}
+#keepsakestile:checked ~ .hiddentext {
+  display: block;
+  opacity: 1;
+}
+input#keepsakestile {
+  display: none;
+  position: relative;
+}
+#companiontile:checked ~ .hiddentext {
+  display: block;
+  opacity: 1;
+}
+input#companiontile {
+  display: none;
+  position: relative;
 }
