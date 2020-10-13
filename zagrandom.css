@@ -1,9 +1,31 @@
-.row {
+/*.row {
   display: flex;
+}*/
+
+body {
+  background-color: #161616;
+  color: #f1f1f1;
+  font-family: sans-serif;
+}
+
+fieldset {
+  background-color: #292929;
+}
+
+legend {
+  font-weight: bold;
+}
+
+@media screen and (prefers-color-scheme: light) {
+  body {
+    background-color: white;
+    color: black;
+  }
 }
 
 .column {
-  flex: 50%;
+  float: left;
+  width: 50%;
 }
 
 @media screen and (max-width: 600px) {
