@@ -6,6 +6,10 @@ function randomize() {
   var getweapon;
   var getcompanion;
   var getkeepsakes;
+  var keepsake_1;
+  var keepsake_2;
+  var keepsake_3;
+  var keepsake_4;
 
   var tot_keep = 0;
 

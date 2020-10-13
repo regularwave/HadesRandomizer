@@ -7,105 +7,116 @@
 
 <body onload="randomize()">
 
-  <button onclick="randomize()">Go</button>
-  <p id="text_weapon">Infernal Arm:</p>
-  <p id="text_keepsakes">Keepsakes:</p>
-  <p id="text_companion">Chthonic Companion:</p>
+  <div class="row">
+    <div class="column">
+      <fieldset>
+        <legend>Run parameters:</legend>
+        <p id="text_weapon">Infernal Arm:</p>
+        <p id="text_keepsakes">Keepsakes:</p>
+        <p id="text_companion">Chthonic Companion:</p>
+        Randomize again? <button onclick="randomize()">Again!</button>
+      </fieldset>
+    </div>
+    <div class="column">
+      <fieldset>
+        <legend>Infernal Arms</legend>
+        <div>
+          Sword
+          <label><input type="checkbox" id="sword_zag" checked>Zagreus</label>
+          <label><input type="checkbox" id="sword_nem" checked>Nemesis</label>
+          <label><input type="checkbox" id="sword_pos" checked>Poseidon</label>
+          <label><input type="checkbox" id="sword_art" checked>Arthur</label>
+        </div>
+        <div>
+          Spear
+          <label><input type="checkbox" id="spear_zag" checked>Zagreus</label>
+          <label><input type="checkbox" id="spear_ach" checked>Achilles</label>
+          <label><input type="checkbox" id="spear_had" checked>Hades</label>
+          <label><input type="checkbox" id="spear_gua" checked>Guan Yu</label>
+        </div>
+        <div>
+          Shield
+          <label><input type="checkbox" id="shield_zag" checked>Zagreus</label>
+          <label><input type="checkbox" id="shield_cha" checked>Chaos</label>
+          <label><input type="checkbox" id="shield_zeu" checked>Zeus</label>
+          <label><input type="checkbox" id="shield_beo" checked>Beowulf</label>
+        </div>
+        <div>
+          Bow
+          <label><input type="checkbox" id="bow_zag" checked>Zagreus</label>
+          <label><input type="checkbox" id="bow_chi" checked>Chiron</label>
+          <label><input type="checkbox" id="bow_her" checked>Hera</label>
+          <label><input type="checkbox" id="bow_ram" checked>Rama</label>
+        </div>
+        <div>
+          Fists
+          <label><input type="checkbox" id="fists_zag" checked>Zagreus</label>
+          <label><input type="checkbox" id="fists_tal" checked>Talos</label>
+          <label><input type="checkbox" id="fists_dem" checked>Demeter</label>
+          <label><input type="checkbox" id="fists_gil" checked>Gilgamesh</label>
+        </div>
+        <div>
+          Rail
+          <label><input type="checkbox" id="rail_zag" checked>Zagreus</label>
+          <label><input type="checkbox" id="rail_eri" checked>Eris</label>
+          <label><input type="checkbox" id="rail_hes" checked>Hestia</label>
+          <label><input type="checkbox" id="rail_luc" checked>Lucifer</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Keepsakes</legend>
+        <div>
+          <label><input type="checkbox" id="keep_cer" checked>Cerberus</label>
+          <label><input type="checkbox" id="keep_ach" checked>Achilles</label>
+          <label><input type="checkbox" id="keep_nyx" checked>Nyx</label>
+          <label><input type="checkbox" id="keep_tha" checked>Thanatos</label>
+          <label><input type="checkbox" id="keep_char" checked>Charon</label>
+        </div>
+        <div>
+          <label><input type="checkbox" id="keep_hyp" checked>Hypnos</label>
+          <label><input type="checkbox" id="keep_meg" checked>Megaera</label>
+          <label><input type="checkbox" id="keep_orp" checked>Orpheus</label>
+          <label><input type="checkbox" id="keep_dus" checked>Dusa</label>
+          <label><input type="checkbox" id="keep_ske" checked>Skelly</label>
+        </div>
+        <div>
+          <label><input type="checkbox" id="keep_zeu" checked>Zeus</label>
+          <label><input type="checkbox" id="keep_pos" checked>Poseidon</label>
+          <label><input type="checkbox" id="keep_ath" checked>Athena</label>
+          <label><input type="checkbox" id="keep_aph" checked>Aphrodite</label>
+          <label><input type="checkbox" id="keep_are" checked>Ares</label>
+        </div>
+        <div>
+          <label><input type="checkbox" id="keep_art" checked>Artemis</label>
+          <label><input type="checkbox" id="keep_dio" checked>Dionysus</label>
+          <label><input type="checkbox" id="keep_her" checked>Hermes</label>
+          <label><input type="checkbox" id="keep_dem" checked>Demeter</label>
+          <label><input type="checkbox" id="keep_chao" checked>Chaos</label>
+        </div>
+        <div>
+          <label><input type="checkbox" id="keep_sis" checked>Sisyphus</label>
+          <label><input type="checkbox" id="keep_eur" checked>Eurydice</label>
+          <label><input type="checkbox" id="keep_pat" checked>Patroclus</label>
+          <label><input type="checkbox" id="keep_per" checked>Persephone</label>
+          <label><input type="checkbox" id="keep_had" checked>Hades</label>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Chthonic Companions</legend>
+        <div>
+          <label><input type="checkbox" id="comp_bat" checked>Battie</label>
+          <label><input type="checkbox" id="comp_mor" checked>Mort</label>
+          <label><input type="checkbox" id="comp_rib" checked>Rib</label>
+          <label><input type="checkbox" id="comp_sha" checked>Shady</label>
+          <label><input type="checkbox" id="comp_fid" checked>Fidi</label>
+          <label><input type="checkbox" id="comp_ant" checked>Antos</label>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  
 
-  <fieldset>
-    <legend>Infernal Arms</legend>
-    <div>
-      Sword
-      <label><input type="checkbox" id="sword_zag" checked>Zagreus</label>
-      <label><input type="checkbox" id="sword_nem" checked>Nemesis</label>
-      <label><input type="checkbox" id="sword_pos" checked>Poseidon</label>
-      <label><input type="checkbox" id="sword_art" checked>Arthur</label>
-    </div>
-    <div>
-      Spear
-      <label><input type="checkbox" id="spear_zag" checked>Zagreus</label>
-      <label><input type="checkbox" id="spear_ach" checked>Achilles</label>
-      <label><input type="checkbox" id="spear_had" checked>Hades</label>
-      <label><input type="checkbox" id="spear_gua" checked>Guan Yu</label>
-    </div>
-    <div>
-      Shield
-      <label><input type="checkbox" id="shield_zag" checked>Zagreus</label>
-      <label><input type="checkbox" id="shield_cha" checked>Chaos</label>
-      <label><input type="checkbox" id="shield_zeu" checked>Zeus</label>
-      <label><input type="checkbox" id="shield_beo" checked>Beowulf</label>
-    </div>
-    <div>
-      Bow
-      <label><input type="checkbox" id="bow_zag" checked>Zagreus</label>
-      <label><input type="checkbox" id="bow_chi" checked>Chiron</label>
-      <label><input type="checkbox" id="bow_her" checked>Hera</label>
-      <label><input type="checkbox" id="bow_ram" checked>Rama</label>
-    </div>
-    <div>
-      Fists
-      <label><input type="checkbox" id="fists_zag" checked>Zagreus</label>
-      <label><input type="checkbox" id="fists_tal" checked>Talos</label>
-      <label><input type="checkbox" id="fists_dem" checked>Demeter</label>
-      <label><input type="checkbox" id="fists_gil" checked>Gilgamesh</label>
-    </div>
-    <div>
-      Rail
-      <label><input type="checkbox" id="rail_zag" checked>Zagreus</label>
-      <label><input type="checkbox" id="rail_eri" checked>Eris</label>
-      <label><input type="checkbox" id="rail_hes" checked>Hestia</label>
-      <label><input type="checkbox" id="rail_luc" checked>Lucifer</label>
-    </div>
-  </fieldset>
-  <fieldset>
-    <legend>Keepsakes</legend>
-    <div>
-      <label><input type="checkbox" id="keep_cer" checked>Cerberus</label>
-      <label><input type="checkbox" id="keep_ach" checked>Achilles</label>
-      <label><input type="checkbox" id="keep_nyx" checked>Nyx</label>
-      <label><input type="checkbox" id="keep_tha" checked>Thanatos</label>
-      <label><input type="checkbox" id="keep_char" checked>Charon</label>
-    </div>
-    <div>
-      <label><input type="checkbox" id="keep_hyp" checked>Hypnos</label>
-      <label><input type="checkbox" id="keep_meg" checked>Megaera</label>
-      <label><input type="checkbox" id="keep_orp" checked>Orpheus</label>
-      <label><input type="checkbox" id="keep_dus" checked>Dusa</label>
-      <label><input type="checkbox" id="keep_ske" checked>Skelly</label>
-    </div>
-    <div>
-      <label><input type="checkbox" id="keep_zeu" checked>Zeus</label>
-      <label><input type="checkbox" id="keep_pos" checked>Poseidon</label>
-      <label><input type="checkbox" id="keep_ath" checked>Athena</label>
-      <label><input type="checkbox" id="keep_aph" checked>Aphrodite</label>
-      <label><input type="checkbox" id="keep_are" checked>Ares</label>
-    </div>
-    <div>
-      <label><input type="checkbox" id="keep_art" checked>Artemis</label>
-      <label><input type="checkbox" id="keep_dio" checked>Dionysus</label>
-      <label><input type="checkbox" id="keep_her" checked>Hermes</label>
-      <label><input type="checkbox" id="keep_dem" checked>Demeter</label>
-      <label><input type="checkbox" id="keep_chao" checked>Chaos</label>
-    </div>
-    <div>
-      <label><input type="checkbox" id="keep_sis" checked>Sisyphus</label>
-      <label><input type="checkbox" id="keep_eur" checked>Eurydice</label>
-      <label><input type="checkbox" id="keep_pat" checked>Patroclus</label>
-      <label><input type="checkbox" id="keep_per" checked>Persephone</label>
-      <label><input type="checkbox" id="keep_had" checked>Hades</label>
-    </div>
-  </fieldset>
-  <fieldset>
-    <legend>Chthonic Companions</legend>
-    <div>
-      <label><input type="checkbox" id="comp_bat" checked>Battie</label>
-      <label><input type="checkbox" id="comp_mor" checked>Mort</label>
-      <label><input type="checkbox" id="comp_rib" checked>Rib</label>
-      <label><input type="checkbox" id="comp_sha" checked>Shady</label>
-      <label><input type="checkbox" id="comp_fid" checked>Fidi</label>
-      <label><input type="checkbox" id="comp_ant" checked>Antos</label>
-    </div>
-  </fieldset>
+  
 
   <script type="text/javascript" src="zagrandom.js"></script>
 </body>
