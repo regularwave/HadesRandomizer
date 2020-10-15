@@ -1,6 +1,7 @@
 function randomize() {
 
   getcbstatus();
+  getheatstatus();
 
   var weapons = [];
   var companion = [];
@@ -134,6 +135,8 @@ function randomize() {
   getcompanion = Math.floor(Math.random() * companion.length);
   document.getElementById("text_companion").innerHTML = companion[getcompanion];
 
+  document.getElementById("text_heat").innerHTML = heatarray;
+
 }
 
 function getcbstatus() {
@@ -194,6 +197,62 @@ function getcbstatus() {
   keep_had = document.getElementById("keep_had").checked;
 }
 
+function getheatstatus() {
+
+  heat_hlv = document.getElementById("heat_hlv").value;
+  heat_lcv = document.getElementById("heat_lcv").value;
+  heat_cfv = document.getElementById("heat_cfv").value;
+  heat_jsv = document.getElementById("heat_jsv").value;
+  heat_emv = document.getElementById("heat_emv").value;
+  heat_cpv = document.getElementById("heat_cpv").value;
+  heat_bpv = document.getElementById("heat_bpv").value;
+  heat_mmv = document.getElementById("heat_mmv").value;
+  heat_ucv = document.getElementById("heat_ucv").value;
+  heat_fov = document.getElementById("heat_fov").value;
+  heat_hsv = document.getElementById("heat_hsv").value;
+  heat_riv = document.getElementById("heat_riv").value;
+  heat_dcv = document.getElementById("heat_dcv").value;
+  heat_apv = document.getElementById("heat_apv").value;
+  heat_tdv = document.getElementById("heat_tdv").value;
+
+  buildheatarray();
+
+
+}
+
+function buildheatarray() {
+
+  heatarray = [];
+
+  for (let i = 0; i < heat_hlv; i++) { heatarray.push("Hard Labor"); }
+  for (let i = 0; i < heat_lcv; i++) { heatarray.push("Lasting Consequences"); }
+  for (let i = 0; i < heat_cfv; i++) { heatarray.push("Convenience Fee"); }
+  for (let i = 0; i < heat_jsv; i++) { heatarray.push("Jury Summons"); }
+  for (let i = 0; i < heat_emv; i++) { heatarray.push("Extreme Measures"); }
+  for (let i = 0; i < heat_cpv; i++) { heatarray.push("Calisthenics Program"); }
+  for (let i = 0; i < heat_bpv; i++) { heatarray.push("Benefits Package"); }
+  for (let i = 0; i < heat_mmv; i++) { heatarray.push("Middle Management"); }
+  for (let i = 0; i < heat_ucv; i++) { heatarray.push("Underworld Customs"); }
+  for (let i = 0; i < heat_fov; i++) { heatarray.push("Forced Overtime"); }
+  for (let i = 0; i < heat_hsv; i++) { heatarray.push("Heightened Security"); }
+  for (let i = 0; i < heat_riv; i++) { heatarray.push("Routine Inspection"); }
+  for (let i = 0; i < heat_dcv; i++) { heatarray.push("Damage Control"); }
+  for (let i = 0; i < heat_apv; i++) { heatarray.push("Approval Process"); }
+  for (let i = 0; i < heat_tdv; i++) { heatarray.push("Tight Deadline"); }
+
+  shuffleheatarray();
+
+}
+
+function shuffleheatarray() {
+
+  for (let i = heatarray.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [heatarray[i], heatarray[j]] = [heatarray[j], heatarray[i]];
+  }
+
+}
+
 function getrandtf() {
   return Math.random() >= 0.5;
 }
@@ -212,6 +271,42 @@ function uncheckall() {
     if (cbitems[i].type == 'checkbox')
       cbitems[i].checked = false;
   }
+}
+
+function reset_heat() {
+  document.getElementById("heat_hlv").value = 5;
+  document.getElementById("heat_lcv").value = 4;
+  document.getElementById("heat_cfv").value = 2;
+  document.getElementById("heat_jsv").value = 3;
+  document.getElementById("heat_emv").value = 4;
+  document.getElementById("heat_cpv").value = 2;
+  document.getElementById("heat_bpv").value = 2;
+  document.getElementById("heat_mmv").value = 1;
+  document.getElementById("heat_ucv").value = 1;
+  document.getElementById("heat_fov").value = 2;
+  document.getElementById("heat_hsv").value = 1;
+  document.getElementById("heat_riv").value = 4;
+  document.getElementById("heat_dcv").value = 2;
+  document.getElementById("heat_apv").value = 2;
+  document.getElementById("heat_tdv").value = 3;
+}
+
+function zero_heat() {
+  document.getElementById("heat_hlv").value = 0;
+  document.getElementById("heat_lcv").value = 0;
+  document.getElementById("heat_cfv").value = 0;
+  document.getElementById("heat_jsv").value = 0;
+  document.getElementById("heat_emv").value = 0;
+  document.getElementById("heat_cpv").value = 0;
+  document.getElementById("heat_bpv").value = 0;
+  document.getElementById("heat_mmv").value = 0;
+  document.getElementById("heat_ucv").value = 0;
+  document.getElementById("heat_fov").value = 0;
+  document.getElementById("heat_hsv").value = 0;
+  document.getElementById("heat_riv").value = 0;
+  document.getElementById("heat_dcv").value = 0;
+  document.getElementById("heat_apv").value = 0;
+  document.getElementById("heat_tdv").value = 0;
 }
 
 function cbgroup_sword() {
@@ -311,4 +406,80 @@ function cbgroup_weapons() {
   cbgroup_bow();
   cbgroup_fists();
   cbgroup_rail();
+}
+
+function cbgroup_keepsakes() {
+  getcbstatus();
+  if (keep_cer && keep_ach && keep_nyx && keep_tha && keep_char && keep_hyp && keep_meg && keep_orp && keep_dus && keep_ske && keep_zeu && keep_pos && keep_ath && keep_aph && keep_are && keep_art && keep_dio && keep_her && keep_dem && keep_chao && keep_sis && keep_eur && keep_pat && keep_per && keep_had) {
+    document.getElementById("keep_cer").checked = false;
+    document.getElementById("keep_ach").checked = false;
+    document.getElementById("keep_nyx").checked = false;
+    document.getElementById("keep_tha").checked = false;
+    document.getElementById("keep_char").checked = false;
+    document.getElementById("keep_hyp").checked = false;
+    document.getElementById("keep_meg").checked = false;
+    document.getElementById("keep_orp").checked = false;
+    document.getElementById("keep_dus").checked = false;
+    document.getElementById("keep_ske").checked = false;
+    document.getElementById("keep_zeu").checked = false;
+    document.getElementById("keep_pos").checked = false;
+    document.getElementById("keep_ath").checked = false;
+    document.getElementById("keep_aph").checked = false;
+    document.getElementById("keep_are").checked = false;
+    document.getElementById("keep_art").checked = false;
+    document.getElementById("keep_dio").checked = false;
+    document.getElementById("keep_her").checked = false;
+    document.getElementById("keep_dem").checked = false;
+    document.getElementById("keep_chao").checked = false;
+    document.getElementById("keep_sis").checked = false;
+    document.getElementById("keep_eur").checked = false;
+    document.getElementById("keep_pat").checked = false;
+    document.getElementById("keep_per").checked = false;
+    document.getElementById("keep_had").checked = false;
+  } else {
+    document.getElementById("keep_cer").checked = true;
+    document.getElementById("keep_ach").checked = true;
+    document.getElementById("keep_nyx").checked = true;
+    document.getElementById("keep_tha").checked = true;
+    document.getElementById("keep_char").checked = true;
+    document.getElementById("keep_hyp").checked = true;
+    document.getElementById("keep_meg").checked = true;
+    document.getElementById("keep_orp").checked = true;
+    document.getElementById("keep_dus").checked = true;
+    document.getElementById("keep_ske").checked = true;
+    document.getElementById("keep_zeu").checked = true;
+    document.getElementById("keep_pos").checked = true;
+    document.getElementById("keep_ath").checked = true;
+    document.getElementById("keep_aph").checked = true;
+    document.getElementById("keep_are").checked = true;
+    document.getElementById("keep_art").checked = true;
+    document.getElementById("keep_dio").checked = true;
+    document.getElementById("keep_her").checked = true;
+    document.getElementById("keep_dem").checked = true;
+    document.getElementById("keep_chao").checked = true;
+    document.getElementById("keep_sis").checked = true;
+    document.getElementById("keep_eur").checked = true;
+    document.getElementById("keep_pat").checked = true;
+    document.getElementById("keep_per").checked = true;
+    document.getElementById("keep_had").checked = true;
+  }
+}
+
+function cbgroup_companions() {
+  getcbstatus();
+  if (comp_bat && comp_mor && comp_rib && comp_sha && comp_fid && comp_ant) {
+    document.getElementById("comp_bat").checked = false;
+    document.getElementById("comp_mor").checked = false;
+    document.getElementById("comp_rib").checked = false;
+    document.getElementById("comp_sha").checked = false;
+    document.getElementById("comp_fid").checked = false;
+    document.getElementById("comp_ant").checked = false;
+  } else {
+    document.getElementById("comp_bat").checked = true;
+    document.getElementById("comp_mor").checked = true;
+    document.getElementById("comp_rib").checked = true;
+    document.getElementById("comp_sha").checked = true;
+    document.getElementById("comp_fid").checked = true;
+    document.getElementById("comp_ant").checked = true;
+  }
 }

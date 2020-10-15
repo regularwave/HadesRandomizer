@@ -16,13 +16,14 @@
         <p class="hiddentext">
           <span class="prompt">Infernal Arm:</span> <span id="text_weapon"></span><br />
           <span class="prompt">Keepsakes:</span> <span id="text_keepsakes"></span><br />
-          <span class="prompt">Companion:</span> <span id="text_companion"></span>
+          <span class="prompt">Companion:</span> <span id="text_companion"></span><br />
+          <span class="prompt">Pact rank order:</span> <span id="text_heat"></span>
         </p>
       </div>
 
       <div class="accordion">
-        <label for="optionstile">Options <span class="arrow">&raquo;</span></label>
         <input type="checkbox" id="optionstile" />
+        <label for="optionstile">Options <span class="arrow"></span></label>
         <p class="hiddentext">
           <button onclick="checkall()">Check All</button>
           <button onclick="uncheckall()">Uncheck All</button>
@@ -30,12 +31,40 @@
         </p>
       </div>
 
+
+
     </div>
     <div class="column">
 
       <div class="accordion">
-        <label for="weaponstile">Infernal Arms <span class="arrow">&raquo;</span></label>
+        <input type="checkbox" id="heattile" />
+        <label for="heattile">Pact of Punishment <span class="arrow"></span></label>
+        <p class="hiddentext">
+          <span class="buttonright">
+            <button onclick="reset_heat()">Reset</button>
+            <br /><button onclick="zero_heat()">Zero</button>
+          </span>
+          <input type="number" min="0" max="5" step="1" value="5" id="heat_hlv">Hard Labor
+          <br /><input type="number" min="0" max="4" step="1" value="4" id="heat_lcv">Lasting Consequences
+          <br /><input type="number" min="0" max="2" step="1" value="2" id="heat_cfv">Convenience Fee
+          <br /><input type="number" min="0" max="3" step="1" value="3" id="heat_jsv">Jury Summons
+          <br /><input type="number" min="0" max="4" step="1" value="4" id="heat_emv">Extreme Measures
+          <br /><input type="number" min="0" max="2" step="1" value="2" id="heat_cpv">Calisthenics Program
+          <br /><input type="number" min="0" max="2" step="1" value="2" id="heat_bpv">Benefits Package
+          <br /><input type="number" min="0" max="1" step="1" value="1" id="heat_mmv">Middle Management
+          <br /><input type="number" min="0" max="1" step="1" value="1" id="heat_ucv">Underworld Customs
+          <br /><input type="number" min="0" max="2" step="1" value="2" id="heat_fov">Forced Overtime
+          <br /><input type="number" min="0" max="1" step="1" value="1" id="heat_hsv">Heightened Security
+          <br /><input type="number" min="0" max="4" step="1" value="4" id="heat_riv">Routine Inspection
+          <br /><input type="number" min="0" max="2" step="1" value="2" id="heat_dcv">Damage Control
+          <br /><input type="number" min="0" max="2" step="1" value="2" id="heat_apv">Approval Process
+          <br /><input type="number" min="0" max="3" step="1" value="3" id="heat_tdv">Tight Deadline
+        </p>
+      </div>
+
+      <div class="accordion">
         <input type="checkbox" id="weaponstile" />
+        <label for="weaponstile">Infernal Arms <span class="arrow"></span></label>
         <p class="hiddentext">
           <button onclick="cbgroup_weapons()" class="buttonright">&hArr;</button>
           <span onclick="cbgroup_sword()">Sword</span>
@@ -77,8 +106,8 @@
       </div>
 
       <div class="accordion">
-        <label for="keepsakestile">Keepsakes <span class="arrow">&raquo;</span></label>
         <input type="checkbox" id="keepsakestile" />
+        <label for="keepsakestile">Keepsakes <span class="arrow"></span></label>
         <p class="hiddentext">
           <button onclick="cbgroup_keepsakes()" class="buttonright">&hArr;</button>
           <input type="checkbox" name="cb" id="keep_cer" checked>Cerberus
@@ -113,8 +142,8 @@
         </p>
       </div>
       <div class="accordion">
-        <label for="companiontile">Chthonic Companions <span class="arrow">&raquo;</span></label>
         <input type="checkbox" id="companiontile" />
+        <label for="companiontile">Chthonic Companions <span class="arrow"></span></label>
         <p class="hiddentext">
           <button onclick="cbgroup_companions()" class="buttonright">&hArr;</button>
           <input type="checkbox" name="cb" id="comp_bat" checked>Battie

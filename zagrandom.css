@@ -12,13 +12,6 @@ body {
   float: right;
 }
 
-@media screen and (prefers-color-scheme: light) {
-  body {
-    background-color: white;
-    color: black;
-  }
-}
-
 .column {
   float: left;
   width: 50%;
@@ -28,6 +21,19 @@ body {
   .column {
     width: 100%;
   }
+}
+
+button {
+  background-color: black;
+  color: white;
+  border: 1px solid #666666;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+  border: 1px solid #ffffff;
 }
 
 .static label {
@@ -69,11 +75,14 @@ body {
   border: 1px solid #eeeeee;
 }
 
-input#paramtile {
+/* parameters tile (hides checkbox) */
+#paramtile {
   display: none;
   position: relative;
 }
-input#optionstile {
+
+/* options tile */
+#optionstile {
   display: none;
   position: relative;
 }
@@ -81,11 +90,35 @@ input#optionstile {
   display: block;
   opacity: 1;
 }
+#optionstile ~ label > .arrow::after {
+  content: "+";
+  float: right;
+}
+#optionstile:checked ~ label > .arrow::after {
+  content: "-";
+  float: right;
+}
+
+/* weapons tile */
+#weaponstile {
+  display: none;
+  position: relative;
+}
 #weaponstile:checked ~ .hiddentext {
   display: block;
   opacity: 1;
 }
-input#weaponstile {
+#weaponstile ~ label > .arrow::after {
+  content: "+";
+  float: right;
+}
+#weaponstile:checked ~ label > .arrow::after {
+  content: "-";
+  float: right;
+}
+
+/* keepsakes tile */
+#keepsakestile {
   display: none;
   position: relative;
 }
@@ -93,7 +126,17 @@ input#weaponstile {
   display: block;
   opacity: 1;
 }
-input#keepsakestile {
+#keepsakestile ~ label > .arrow::after {
+  content: "+";
+  float: right;
+}
+#keepsakestile:checked ~ label > .arrow::after {
+  content: "-";
+  float: right;
+}
+
+/* companion tile */
+#companiontile {
   display: none;
   position: relative;
 }
@@ -101,7 +144,29 @@ input#keepsakestile {
   display: block;
   opacity: 1;
 }
-input#companiontile {
+#companiontile ~ label > .arrow::after {
+  content: "+";
+  float: right;
+}
+#companiontile:checked ~ label > .arrow::after {
+  content: "-";
+  float: right;
+}
+
+/* heat tile */
+#heattile {
   display: none;
   position: relative;
+}
+#heattile:checked ~ .hiddentext {
+  display: block;
+  opacity: 1;
+}
+#heattile ~ label > .arrow::after {
+  content: "+";
+  float: right;
+}
+#heattile:checked ~ label > .arrow::after {
+  content: "-";
+  float: right;
 }
