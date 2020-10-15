@@ -36,7 +36,7 @@ button:hover {
   border: 1px solid #ffffff;
 }
 
-.static label {
+.static > label {
   display:block;
   background-color: #393939;
   padding: 0.5rem;
@@ -73,6 +73,28 @@ button:hover {
   background-color: #292929;
   margin: 0px;
   border: 1px solid #eeeeee;
+}
+
+.internalaccordion .hiddentext {
+  opacity: 0;
+  display: none;
+}
+#pactrankstile {
+  display: none;
+  position: relative;
+}
+#pactrankstile:checked ~ .hiddentext {
+  display: inline;
+  opacity: 1;
+}
+#pactrankstile ~ label > .arrow::after {
+  content: "Show...";
+  font-style: italic;
+  border: 1px dotted #eeeeee;
+  cursor: pointer;
+}
+#pactrankstile:checked ~ label > .arrow::after {
+  content: "Hide";
 }
 
 /* parameters tile (hides checkbox) */
