@@ -44,31 +44,31 @@ function randomize() {
   if (comp_fid) { companion.push("Fidi") }
   if (comp_ant) { companion.push("Antos") }
 
-  if (keep_cer) { verbosetext ? keepsakes.push("Cerberus' Old Spiked Collar") : keepsakes.push(" Cerberus") }
-  if (keep_ach) { verbosetext ? keepsakes.push("Achilles' Myrmidon Bracer") : keepsakes.push(" Achilles") }
-  if (keep_nyx) { verbosetext ? keepsakes.push("Nyx's Black Shawl") : keepsakes.push(" Nyx") }
-  if (keep_tha) { verbosetext ? keepsakes.push("Thanatos' Pierced Butterfly") : keepsakes.push(" Thanatos") }
-  if (keep_char) { verbosetext ? keepsakes.push("Charon's Bone Hourglass") : keepsakes.push(" Charon") }
-  if (keep_hyp) { verbosetext ? keepsakes.push("Hypnos' Chthonic Coin Purse") : keepsakes.push(" Hypnos") }
-  if (keep_meg) { verbosetext ? keepsakes.push("Megaera's Skull Earring") : keepsakes.push(" Megaera") }
-  if (keep_orp) { verbosetext ? keepsakes.push("Orpheus' Distant Memory") : keepsakes.push(" Orpheus") }
-  if (keep_dus) { verbosetext ? keepsakes.push("Dusa's Harpy Feather Duster") : keepsakes.push(" Dusa") }
-  if (keep_ske) { verbosetext ? keepsakes.push("Skelly's Lucky Tooth") : keepsakes.push(" Skelly") }
-  if (keep_zeu) { verbosetext ? keepsakes.push("Zeus' Thunder Signet") : keepsakes.push(" Zeus") }
-  if (keep_pos) { verbosetext ? keepsakes.push("Poseidon's Conch Shell") : keepsakes.push(" Poseidon") }
-  if (keep_ath) { verbosetext ? keepsakes.push("Athena's Owl Pendant") : keepsakes.push(" Athena") }
-  if (keep_aph) { verbosetext ? keepsakes.push("Aphrodite's Eternal Rose") : keepsakes.push(" Aphrodite") }
-  if (keep_are) { verbosetext ? keepsakes.push("Ares' Blood-Filled Vial") : keepsakes.push(" Ares") }
-  if (keep_art) { verbosetext ? keepsakes.push("Artemis' Adamant Arrowhead") : keepsakes.push(" Artemis") }
-  if (keep_dio) { verbosetext ? keepsakes.push("Dionysus' Overflowing cup") : keepsakes.push(" Dionysus") }
-  if (keep_her) { verbosetext ? keepsakes.push("Hermes' Lambent Plume") : keepsakes.push(" Hermes") }
-  if (keep_dem) { verbosetext ? keepsakes.push("Demeter's Frostbitten Horn") : keepsakes.push(" Demeter") }
-  if (keep_chao) { verbosetext ? keepsakes.push("Chaos' Cosmic Egg") : keepsakes.push(" Chaos") }
-  if (keep_sis) { verbosetext ? keepsakes.push("Sisyphus' Shattered Shackle") : keepsakes.push(" Sisyphus") }
-  if (keep_eur) { verbosetext ? keepsakes.push("Eurydice's Evergreen Acorn") : keepsakes.push(" Eurydice") }
-  if (keep_pat) { verbosetext ? keepsakes.push("Patroclus' Broken Spearpoint") : keepsakes.push(" Patroclus") }
-  if (keep_per) { verbosetext ? keepsakes.push("Persephone's Pom Blossom") : keepsakes.push(" Persephone") }
-  if (keep_had) { verbosetext ? keepsakes.push("Hades' Sigil of the Dead") : keepsakes.push(" Hades") }
+  if (keep_cer) { verbosetext ? keepsakes.push(" Cerberus' Old Spiked Collar") : keepsakes.push(" Cerberus") }
+  if (keep_ach) { verbosetext ? keepsakes.push(" Achilles' Myrmidon Bracer") : keepsakes.push(" Achilles") }
+  if (keep_nyx) { verbosetext ? keepsakes.push(" Nyx's Black Shawl") : keepsakes.push(" Nyx") }
+  if (keep_tha) { verbosetext ? keepsakes.push(" Thanatos' Pierced Butterfly") : keepsakes.push(" Thanatos") }
+  if (keep_char) { verbosetext ? keepsakes.push(" Charon's Bone Hourglass") : keepsakes.push(" Charon") }
+  if (keep_hyp) { verbosetext ? keepsakes.push(" Hypnos' Chthonic Coin Purse") : keepsakes.push(" Hypnos") }
+  if (keep_meg) { verbosetext ? keepsakes.push(" Megaera's Skull Earring") : keepsakes.push(" Megaera") }
+  if (keep_orp) { verbosetext ? keepsakes.push(" Orpheus' Distant Memory") : keepsakes.push(" Orpheus") }
+  if (keep_dus) { verbosetext ? keepsakes.push(" Dusa's Harpy Feather Duster") : keepsakes.push(" Dusa") }
+  if (keep_ske) { verbosetext ? keepsakes.push(" Skelly's Lucky Tooth") : keepsakes.push(" Skelly") }
+  if (keep_zeu) { verbosetext ? keepsakes.push(" Zeus' Thunder Signet") : keepsakes.push(" Zeus") }
+  if (keep_pos) { verbosetext ? keepsakes.push(" Poseidon's Conch Shell") : keepsakes.push(" Poseidon") }
+  if (keep_ath) { verbosetext ? keepsakes.push(" Athena's Owl Pendant") : keepsakes.push(" Athena") }
+  if (keep_aph) { verbosetext ? keepsakes.push(" Aphrodite's Eternal Rose") : keepsakes.push(" Aphrodite") }
+  if (keep_are) { verbosetext ? keepsakes.push(" Ares' Blood-Filled Vial") : keepsakes.push(" Ares") }
+  if (keep_art) { verbosetext ? keepsakes.push(" Artemis' Adamant Arrowhead") : keepsakes.push(" Artemis") }
+  if (keep_dio) { verbosetext ? keepsakes.push(" Dionysus' Overflowing cup") : keepsakes.push(" Dionysus") }
+  if (keep_her) { verbosetext ? keepsakes.push(" Hermes' Lambent Plume") : keepsakes.push(" Hermes") }
+  if (keep_dem) { verbosetext ? keepsakes.push(" Demeter's Frostbitten Horn") : keepsakes.push(" Demeter") }
+  if (keep_chao) { verbosetext ? keepsakes.push(" Chaos' Cosmic Egg") : keepsakes.push(" Chaos") }
+  if (keep_sis) { verbosetext ? keepsakes.push(" Sisyphus' Shattered Shackle") : keepsakes.push(" Sisyphus") }
+  if (keep_eur) { verbosetext ? keepsakes.push(" Eurydice's Evergreen Acorn") : keepsakes.push(" Eurydice") }
+  if (keep_pat) { verbosetext ? keepsakes.push(" Patroclus' Broken Spearpoint") : keepsakes.push(" Patroclus") }
+  if (keep_per) { verbosetext ? keepsakes.push(" Persephone's Pom Blossom") : keepsakes.push(" Persephone") }
+  if (keep_had) { verbosetext ? keepsakes.push(" Hades' Sigil of the Dead") : keepsakes.push(" Hades") }
 
   getweapon = Math.floor(Math.random() * weapons.length);
   document.getElementById("text_weapon").innerHTML = weapons[getweapon];
@@ -175,21 +175,21 @@ function buildheatarray() {
 
   heatarray = [];
 
-  for (let i = 0; i < heat_hlv; i++) { verbosetext ? heatarray.push("Hard Labor") : heatarray.push(" HL") }
-  for (let i = 0; i < heat_lcv; i++) { verbosetext ? heatarray.push("Lasting Consequences") : heatarray.push(" LC") }
-  for (let i = 0; i < heat_cfv; i++) { verbosetext ? heatarray.push("Convenience Fee") : heatarray.push(" CF") }
-  for (let i = 0; i < heat_jsv; i++) { verbosetext ? heatarray.push("Jury Summons") : heatarray.push(" JS") }
-  for (let i = 0; i < heat_emv; i++) { verbosetext ? heatarray.push("Extreme Measures") : heatarray.push(" EM") }
-  for (let i = 0; i < heat_cpv; i++) { verbosetext ? heatarray.push("Calisthenics Program") : heatarray.push(" CP") }
-  for (let i = 0; i < heat_bpv; i++) { verbosetext ? heatarray.push("Benefits Package") : heatarray.push(" BP") }
-  for (let i = 0; i < heat_mmv; i++) { verbosetext ? heatarray.push("Middle Management") : heatarray.push(" MM") }
-  for (let i = 0; i < heat_ucv; i++) { verbosetext ? heatarray.push("Underworld Customs") : heatarray.push(" UC") }
-  for (let i = 0; i < heat_fov; i++) { verbosetext ? heatarray.push("Forced Overtime") : heatarray.push(" FO") }
-  for (let i = 0; i < heat_hsv; i++) { verbosetext ? heatarray.push("Heightened Security") : heatarray.push(" HS") }
-  for (let i = 0; i < heat_riv; i++) { verbosetext ? heatarray.push("Routine Inspection") : heatarray.push(" RI") }
-  for (let i = 0; i < heat_dcv; i++) { verbosetext ? heatarray.push("Damage Control") : heatarray.push(" DC") }
-  for (let i = 0; i < heat_apv; i++) { verbosetext ? heatarray.push("Approval Process") : heatarray.push(" AP") }
-  for (let i = 0; i < heat_tdv; i++) { verbosetext ? heatarray.push("Tight Deadline") : heatarray.push(" TD") }
+  for (let i = 0; i < heat_hlv; i++) { verbosetext ? heatarray.push(" Hard Labor") : heatarray.push(" HL") }
+  for (let i = 0; i < heat_lcv; i++) { verbosetext ? heatarray.push(" Lasting Consequences") : heatarray.push(" LC") }
+  for (let i = 0; i < heat_cfv; i++) { verbosetext ? heatarray.push(" Convenience Fee") : heatarray.push(" CF") }
+  for (let i = 0; i < heat_jsv; i++) { verbosetext ? heatarray.push(" Jury Summons") : heatarray.push(" JS") }
+  for (let i = 0; i < heat_emv; i++) { verbosetext ? heatarray.push(" Extreme Measures") : heatarray.push(" EM") }
+  for (let i = 0; i < heat_cpv; i++) { verbosetext ? heatarray.push(" Calisthenics Program") : heatarray.push(" CP") }
+  for (let i = 0; i < heat_bpv; i++) { verbosetext ? heatarray.push(" Benefits Package") : heatarray.push(" BP") }
+  for (let i = 0; i < heat_mmv; i++) { verbosetext ? heatarray.push(" Middle Management") : heatarray.push(" MM") }
+  for (let i = 0; i < heat_ucv; i++) { verbosetext ? heatarray.push(" Underworld Customs") : heatarray.push(" UC") }
+  for (let i = 0; i < heat_fov; i++) { verbosetext ? heatarray.push(" Forced Overtime") : heatarray.push(" FO") }
+  for (let i = 0; i < heat_hsv; i++) { verbosetext ? heatarray.push(" Heightened Security") : heatarray.push(" HS") }
+  for (let i = 0; i < heat_riv; i++) { verbosetext ? heatarray.push(" Routine Inspection") : heatarray.push(" RI") }
+  for (let i = 0; i < heat_dcv; i++) { verbosetext ? heatarray.push(" Damage Control") : heatarray.push(" DC") }
+  for (let i = 0; i < heat_apv; i++) { verbosetext ? heatarray.push(" Approval Process") : heatarray.push(" AP") }
+  for (let i = 0; i < heat_tdv; i++) { verbosetext ? heatarray.push(" Tight Deadline") : heatarray.push(" TD") }
 
   shufflearray(heatarray);
 
