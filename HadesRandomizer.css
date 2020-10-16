@@ -8,6 +8,7 @@ body {
   float: left;
   width: 100%;
   font-size: 0.6em;
+  text-align: center;
 }
 
 .prompt {
