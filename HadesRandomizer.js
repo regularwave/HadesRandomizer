@@ -8,15 +8,9 @@ function randomize() {
   var keepsakes = [];
   var getweapon;
   var getcompanion;
-  var getkeepsakes;
-  var keepsake_1;
-  var keepsake_2;
-  var keepsake_3;
-  var keepsake_4;
+  var kshold = [];
 
-  var tot_keep = 0;
-  
-  var verbosetext = document.getElementById("verbosetext").checked;
+  verbosetext = document.getElementById("verbosetext").checked;
 
   if (sword_zag) { verbosetext ? weapons.push("Stygius, the Blade of the Underworld: Aspect of Zagreus") : weapons.push("Sword: Zagreus") }
   if (sword_nem) { verbosetext ? weapons.push("Stygius, the Blade of the Underworld: Aspect of Nemesis") : weapons.push("Sword: Nemesis") }
@@ -50,93 +44,52 @@ function randomize() {
   if (comp_fid) { companion.push("Fidi") }
   if (comp_ant) { companion.push("Antos") }
 
-  if (keep_cer) { tot_keep++; verbosetext ? keepsakes.push("Cerberus' Old Spiked Collar") : keepsakes.push("Cerberus") }
-  if (keep_ach) { tot_keep++; verbosetext ? keepsakes.push("Achilles' Myrmidon Bracer") : keepsakes.push("Achilles") }
-  if (keep_nyx) { tot_keep++; verbosetext ? keepsakes.push("Nyx's Black Shawl") : keepsakes.push("Nyx") }
-  if (keep_tha) { tot_keep++; verbosetext ? keepsakes.push("Thanatos' Pierced Butterfly") : keepsakes.push("Thanatos") }
-  if (keep_char) { tot_keep++; verbosetext ? keepsakes.push("Charon's Bone Hourglass") : keepsakes.push("Charon") }
-  if (keep_hyp) { tot_keep++; verbosetext ? keepsakes.push("Hypnos' Chthonic Coin Purse") : keepsakes.push("Hypnos") }
-  if (keep_meg) { tot_keep++; verbosetext ? keepsakes.push("Megaera's Skull Earring") : keepsakes.push("Megaera") }
-  if (keep_orp) { tot_keep++; verbosetext ? keepsakes.push("Orpheus' Distant Memory") : keepsakes.push("Orpheus") }
-  if (keep_dus) { tot_keep++; verbosetext ? keepsakes.push("Dusa's Harpy Feather Duster") : keepsakes.push("Dusa") }
-  if (keep_ske) { tot_keep++; verbosetext ? keepsakes.push("Skelly's Lucky Tooth") : keepsakes.push("Skelly") }
-  if (keep_zeu) { tot_keep++; verbosetext ? keepsakes.push("Zeus' Thunder Signet") : keepsakes.push("Zeus") }
-  if (keep_pos) { tot_keep++; verbosetext ? keepsakes.push("Poseidon's Conch Shell") : keepsakes.push("Poseidon") }
-  if (keep_ath) { tot_keep++; verbosetext ? keepsakes.push("Athena's Owl Pendant") : keepsakes.push("Athena") }
-  if (keep_aph) { tot_keep++; verbosetext ? keepsakes.push("Aphrodite's Eternal Rose") : keepsakes.push("Aphrodite") }
-  if (keep_are) { tot_keep++; verbosetext ? keepsakes.push("Ares' Blood-Filled Vial") : keepsakes.push("Ares") }
-  if (keep_art) { tot_keep++; verbosetext ? keepsakes.push("Artemis' Adamant Arrowhead") : keepsakes.push("Artemis") }
-  if (keep_dio) { tot_keep++; verbosetext ? keepsakes.push("Dionysus' Overflowing cup") : keepsakes.push("Dionysus") }
-  if (keep_her) { tot_keep++; verbosetext ? keepsakes.push("Hermes' Lambent Plume") : keepsakes.push("Hermes") }
-  if (keep_dem) { tot_keep++; verbosetext ? keepsakes.push("Demeter's Frostbitten Horn") : keepsakes.push("Demeter") }
-  if (keep_chao) { tot_keep++; verbosetext ? keepsakes.push("Chaos' Cosmic Egg") : keepsakes.push("Chaos") }
-  if (keep_sis) { tot_keep++; verbosetext ? keepsakes.push("Sisyphus' Shattered Shackle") : keepsakes.push("Sisyphus") }
-  if (keep_eur) { tot_keep++; verbosetext ? keepsakes.push("Eurydice's Evergreen Acorn") : keepsakes.push("Eurydice") }
-  if (keep_pat) { tot_keep++; verbosetext ? keepsakes.push("Patroclus' Broken Spearpoint") : keepsakes.push("Patroclus") }
-  if (keep_per) { tot_keep++; verbosetext ? keepsakes.push("Persephone's Pom Blossom") : keepsakes.push("Persephone") }
-  if (keep_had) { tot_keep++; verbosetext ? keepsakes.push("Hades' Sigil of the Dead") : keepsakes.push("Hades") }
+  if (keep_cer) { verbosetext ? keepsakes.push("Cerberus' Old Spiked Collar") : keepsakes.push("Cerberus") }
+  if (keep_ach) { verbosetext ? keepsakes.push("Achilles' Myrmidon Bracer") : keepsakes.push("Achilles") }
+  if (keep_nyx) { verbosetext ? keepsakes.push("Nyx's Black Shawl") : keepsakes.push("Nyx") }
+  if (keep_tha) { verbosetext ? keepsakes.push("Thanatos' Pierced Butterfly") : keepsakes.push("Thanatos") }
+  if (keep_char) { verbosetext ? keepsakes.push("Charon's Bone Hourglass") : keepsakes.push("Charon") }
+  if (keep_hyp) { verbosetext ? keepsakes.push("Hypnos' Chthonic Coin Purse") : keepsakes.push("Hypnos") }
+  if (keep_meg) { verbosetext ? keepsakes.push("Megaera's Skull Earring") : keepsakes.push("Megaera") }
+  if (keep_orp) { verbosetext ? keepsakes.push("Orpheus' Distant Memory") : keepsakes.push("Orpheus") }
+  if (keep_dus) { verbosetext ? keepsakes.push("Dusa's Harpy Feather Duster") : keepsakes.push("Dusa") }
+  if (keep_ske) { verbosetext ? keepsakes.push("Skelly's Lucky Tooth") : keepsakes.push("Skelly") }
+  if (keep_zeu) { verbosetext ? keepsakes.push("Zeus' Thunder Signet") : keepsakes.push("Zeus") }
+  if (keep_pos) { verbosetext ? keepsakes.push("Poseidon's Conch Shell") : keepsakes.push("Poseidon") }
+  if (keep_ath) { verbosetext ? keepsakes.push("Athena's Owl Pendant") : keepsakes.push("Athena") }
+  if (keep_aph) { verbosetext ? keepsakes.push("Aphrodite's Eternal Rose") : keepsakes.push("Aphrodite") }
+  if (keep_are) { verbosetext ? keepsakes.push("Ares' Blood-Filled Vial") : keepsakes.push("Ares") }
+  if (keep_art) { verbosetext ? keepsakes.push("Artemis' Adamant Arrowhead") : keepsakes.push("Artemis") }
+  if (keep_dio) { verbosetext ? keepsakes.push("Dionysus' Overflowing cup") : keepsakes.push("Dionysus") }
+  if (keep_her) { verbosetext ? keepsakes.push("Hermes' Lambent Plume") : keepsakes.push("Hermes") }
+  if (keep_dem) { verbosetext ? keepsakes.push("Demeter's Frostbitten Horn") : keepsakes.push("Demeter") }
+  if (keep_chao) { verbosetext ? keepsakes.push("Chaos' Cosmic Egg") : keepsakes.push("Chaos") }
+  if (keep_sis) { verbosetext ? keepsakes.push("Sisyphus' Shattered Shackle") : keepsakes.push("Sisyphus") }
+  if (keep_eur) { verbosetext ? keepsakes.push("Eurydice's Evergreen Acorn") : keepsakes.push("Eurydice") }
+  if (keep_pat) { verbosetext ? keepsakes.push("Patroclus' Broken Spearpoint") : keepsakes.push("Patroclus") }
+  if (keep_per) { verbosetext ? keepsakes.push("Persephone's Pom Blossom") : keepsakes.push("Persephone") }
+  if (keep_had) { verbosetext ? keepsakes.push("Hades' Sigil of the Dead") : keepsakes.push("Hades") }
 
   getweapon = Math.floor(Math.random() * weapons.length);
   document.getElementById("text_weapon").innerHTML = weapons[getweapon];
 
-  switch (tot_keep) {
-    case 0:
-      document.getElementById("text_keepsakes").innerHTML = "-";
-      break;
-    case 1:
-      document.getElementById("text_keepsakes").innerHTML = keepsakes[0];
-      break;
-    case 2:
-      if (getrandtf()) {
-        document.getElementById("text_keepsakes").innerHTML = keepsakes[0] + ", " + keepsakes[1];
-      } else {
-        document.getElementById("text_keepsakes").innerHTML = keepsakes[1] + ", " + keepsakes[0];
+  do {
+    shufflearray(keepsakes);
+    kshold.push(keepsakes[0]);
+    if (kshold.length > 1) {
+      if (kshold[kshold.length - 2] != kshold[kshold.length - 1]) {
+        keepsakes.splice(keepsakes.indexOf(kshold[kshold.length - 2]), 1);
       }
-      break;
-    case 3:
-      getkeepsakes = Math.floor(Math.random() * keepsakes.length);
-      keepsake_1 = keepsakes[getkeepsakes];
-      keepsakes.splice(getkeepsakes, 1);
-      getkeepsakes = Math.floor(Math.random() * keepsakes.length);
-      keepsake_2 = keepsakes[getkeepsakes];
-      keepsakes.splice(getkeepsakes, 1);
-      keepsake_3 = keepsakes[0];
-      document.getElementById("text_keepsakes").innerHTML = keepsake_1 + ", " + keepsake_2 + ", " + keepsake_3;
-      break;
-    case 4:
-      getkeepsakes = Math.floor(Math.random() * keepsakes.length);
-      keepsake_1 = keepsakes[getkeepsakes];
-      keepsakes.splice(getkeepsakes, 1);
-      getkeepsakes = Math.floor(Math.random() * keepsakes.length);
-      keepsake_2 = keepsakes[getkeepsakes];
-      keepsakes.splice(getkeepsakes, 1);
-      getkeepsakes = Math.floor(Math.random() * keepsakes.length);
-      keepsake_3 = keepsakes[getkeepsakes];
-      keepsakes.splice(getkeepsakes, 1);
-      keepsake_4 = keepsakes[0];
-      document.getElementById("text_keepsakes").innerHTML = keepsake_1 + ", " + keepsake_2 + ", " + keepsake_3 + ", " + keepsake_4;
-      break;
-    default:
-      getkeepsakes = Math.floor(Math.random() * keepsakes.length);
-      keepsake_1 = keepsakes[getkeepsakes];
-      keepsakes.splice(getkeepsakes, 1);
-      getkeepsakes = Math.floor(Math.random() * keepsakes.length);
-      keepsake_2 = keepsakes[getkeepsakes];
-      keepsakes.splice(getkeepsakes, 1);
-      getkeepsakes = Math.floor(Math.random() * keepsakes.length);
-      keepsake_3 = keepsakes[getkeepsakes];
-      keepsakes.splice(getkeepsakes, 1);
-      getkeepsakes = Math.floor(Math.random() * keepsakes.length);
-      keepsake_4 = keepsakes[getkeepsakes];
-      document.getElementById("text_keepsakes").innerHTML = keepsake_1 + ", " + keepsake_2 + ", " + keepsake_3 + ", " + keepsake_4;
-      break;
-  }
+    }
+  } while (kshold.length < 4);
+
+  document.getElementById("text_keepsakes").innerHTML = kshold;
 
   getcompanion = Math.floor(Math.random() * companion.length);
   document.getElementById("text_companion").innerHTML = companion[getcompanion];
 
+  getheatstatus();
   document.getElementById("text_heat").innerHTML = heatarray;
-
 }
 
 function getcbstatus() {
@@ -216,39 +169,37 @@ function getheatstatus() {
   heat_tdv = document.getElementById("heat_tdv").value;
 
   buildheatarray();
-
-
 }
 
 function buildheatarray() {
 
   heatarray = [];
 
-  for (let i = 0; i < heat_hlv; i++) { heatarray.push("Hard Labor"); }
-  for (let i = 0; i < heat_lcv; i++) { heatarray.push("Lasting Consequences"); }
-  for (let i = 0; i < heat_cfv; i++) { heatarray.push("Convenience Fee"); }
-  for (let i = 0; i < heat_jsv; i++) { heatarray.push("Jury Summons"); }
-  for (let i = 0; i < heat_emv; i++) { heatarray.push("Extreme Measures"); }
-  for (let i = 0; i < heat_cpv; i++) { heatarray.push("Calisthenics Program"); }
-  for (let i = 0; i < heat_bpv; i++) { heatarray.push("Benefits Package"); }
-  for (let i = 0; i < heat_mmv; i++) { heatarray.push("Middle Management"); }
-  for (let i = 0; i < heat_ucv; i++) { heatarray.push("Underworld Customs"); }
-  for (let i = 0; i < heat_fov; i++) { heatarray.push("Forced Overtime"); }
-  for (let i = 0; i < heat_hsv; i++) { heatarray.push("Heightened Security"); }
-  for (let i = 0; i < heat_riv; i++) { heatarray.push("Routine Inspection"); }
-  for (let i = 0; i < heat_dcv; i++) { heatarray.push("Damage Control"); }
-  for (let i = 0; i < heat_apv; i++) { heatarray.push("Approval Process"); }
-  for (let i = 0; i < heat_tdv; i++) { heatarray.push("Tight Deadline"); }
+  for (let i = 0; i < heat_hlv; i++) { verbosetext ? heatarray.push("Hard Labor") : heatarray.push(" HL") }
+  for (let i = 0; i < heat_lcv; i++) { verbosetext ? heatarray.push("Lasting Consequences") : heatarray.push(" LC") }
+  for (let i = 0; i < heat_cfv; i++) { verbosetext ? heatarray.push("Convenience Fee") : heatarray.push(" CF") }
+  for (let i = 0; i < heat_jsv; i++) { verbosetext ? heatarray.push("Jury Summons") : heatarray.push(" JS") }
+  for (let i = 0; i < heat_emv; i++) { verbosetext ? heatarray.push("Extreme Measures") : heatarray.push(" EM") }
+  for (let i = 0; i < heat_cpv; i++) { verbosetext ? heatarray.push("Calisthenics Program") : heatarray.push(" CP") }
+  for (let i = 0; i < heat_bpv; i++) { verbosetext ? heatarray.push("Benefits Package") : heatarray.push(" BP") }
+  for (let i = 0; i < heat_mmv; i++) { verbosetext ? heatarray.push("Middle Management") : heatarray.push(" MM") }
+  for (let i = 0; i < heat_ucv; i++) { verbosetext ? heatarray.push("Underworld Customs") : heatarray.push(" UC") }
+  for (let i = 0; i < heat_fov; i++) { verbosetext ? heatarray.push("Forced Overtime") : heatarray.push(" FO") }
+  for (let i = 0; i < heat_hsv; i++) { verbosetext ? heatarray.push("Heightened Security") : heatarray.push(" HS") }
+  for (let i = 0; i < heat_riv; i++) { verbosetext ? heatarray.push("Routine Inspection") : heatarray.push(" RI") }
+  for (let i = 0; i < heat_dcv; i++) { verbosetext ? heatarray.push("Damage Control") : heatarray.push(" DC") }
+  for (let i = 0; i < heat_apv; i++) { verbosetext ? heatarray.push("Approval Process") : heatarray.push(" AP") }
+  for (let i = 0; i < heat_tdv; i++) { verbosetext ? heatarray.push("Tight Deadline") : heatarray.push(" TD") }
 
-  shuffleheatarray();
+  shufflearray(heatarray);
 
 }
 
-function shuffleheatarray() {
+function shufflearray(arr) {
 
-  for (let i = heatarray.length - 1; i > 0; i--) {
+  for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [heatarray[i], heatarray[j]] = [heatarray[j], heatarray[i]];
+    [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 
 }
