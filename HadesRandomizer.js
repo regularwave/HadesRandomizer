@@ -15,7 +15,7 @@ function randomize() {
   var keepsake_4;
 
   var tot_keep = 0;
-
+  
   var verbosetext = document.getElementById("verbosetext").checked;
 
   if (sword_zag) { verbosetext ? weapons.push("Stygius, the Blade of the Underworld: Aspect of Zagreus") : weapons.push("Sword: Zagreus") }
