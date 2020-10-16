@@ -4,6 +4,12 @@ body {
   font-family: sans-serif;
 }
 
+.footer {
+  float: left;
+  width: 100%;
+  font-size: 0.6em;
+}
+
 .prompt {
   font-weight: bold;
 }
