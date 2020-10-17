@@ -8,6 +8,7 @@ function randomize() {
   var keepsakes = [];
   var getweapon;
   var getcompanion;
+
   var kshold = [];
 
   verbosetext = document.getElementById("verbosetext").checked;
@@ -88,6 +89,37 @@ function randomize() {
   getcompanion = Math.floor(Math.random() * companion.length);
   document.getElementById("text_companion").innerHTML = companion[getcompanion];
 
+
+  /*mslots rows are [red status, green status, red short, green short, red verbose, green verbose, " none"] */
+  let mslots = [
+    [mirror_ShPr, mirror_FiPr, " ShPr", " FiPr", " Shadow Presence", " Fiery Presence", " none"],
+    [mirror_ChVi, mirror_DaRe, " ChVi", " DaRe", " Chthonic Vitality", " Dark Regeneration", " none"],
+    [mirror_DeDe, mirror_StDe, " DeDe", " StDe", " Death Defiance", " Stubborn Defiance", " none"],
+    [mirror_GrRe, mirror_RuRe, " GrRe", " RuRe", " Greater Reflex", " Ruthless Reflex", " none"],
+    [mirror_BoBl, mirror_AbBl, " BoBl", " AbBl", " Boiling Blood", " Abyssal Blood", " none"],
+    [mirror_InSo, mirror_StSo, " InSo", " StSo", " Infernal Soul", " Stygian Soul", " none"],
+    [mirror_DePo, mirror_GoTo, " DePo", " GoTo", " Deep Pockets", " Golden Touch", " none"],
+    [mirror_ThSk, mirror_HiCo, " ThSk", " HiCo", " Thick Skin", " High Confidence", " none"],
+    [mirror_PrSt, mirror_FaFa, " PrSt", " FaFa", " Privileged Status", " Family Favorite", " none"],
+    [mirror_OlFa, mirror_DaFo, " OlFa", " DaFo", " Olympian Favor", " Dark Foresight", " none"],
+    [mirror_GoPr, mirror_GoLe, " GoPr", " GoLe", " Gods' Pride", " Gods' Legacy", " none"],
+    [mirror_FaAu, mirror_FaPe, " FaAu", " FaPe", " Fated Authority", " Fated Persuasion", " none"]
+  ];
+
+  var mirrorarray = [];
+  do {
+    if (mslots[mirrorarray.length][0] && mslots[mirrorarray.length][1]) {
+      getrandtf() ? mirrorarray.push(mslots[mirrorarray.length][verbosetext ? 4 : 2]) : mirrorarray.push(mslots[mirrorarray.length][verbosetext ? 5 : 3]);
+    } else if (mslots[mirrorarray.length][0] && !mslots[mirrorarray.length][1]) {
+      mirrorarray.push(mslots[mirrorarray.length][verbosetext ? 4 : 2]);
+    } else if (!mslots[mirrorarray.length][0] && mslots[mirrorarray.length][1]) {
+      mirrorarray.push(mslots[mirrorarray.length][verbosetext ? 5 : 3]);
+    } else {
+      mirrorarray.push(mslots[mirrorarray.length][6]);
+    }
+  } while (mirrorarray.length < 12);
+  document.getElementById("text_mirror").innerHTML = mirrorarray;
+
   getheatstatus();
   document.getElementById("text_heat").innerHTML = heatarray;
 }
@@ -148,6 +180,30 @@ function getcbstatus() {
   keep_pat = document.getElementById("keep_pat").checked;
   keep_per = document.getElementById("keep_per").checked;
   keep_had = document.getElementById("keep_had").checked;
+  mirror_ShPr = document.getElementById("mirror_ShPr").checked;
+  mirror_FiPr = document.getElementById("mirror_FiPr").checked;
+  mirror_ChVi = document.getElementById("mirror_ChVi").checked;
+  mirror_DaRe = document.getElementById("mirror_DaRe").checked;
+  mirror_DeDe = document.getElementById("mirror_DeDe").checked;
+  mirror_StDe = document.getElementById("mirror_StDe").checked;
+  mirror_GrRe = document.getElementById("mirror_GrRe").checked;
+  mirror_RuRe = document.getElementById("mirror_RuRe").checked;
+  mirror_BoBl = document.getElementById("mirror_BoBl").checked;
+  mirror_AbBl = document.getElementById("mirror_AbBl").checked;
+  mirror_InSo = document.getElementById("mirror_InSo").checked;
+  mirror_StSo = document.getElementById("mirror_StSo").checked;
+  mirror_DePo = document.getElementById("mirror_DePo").checked;
+  mirror_GoTo = document.getElementById("mirror_GoTo").checked;
+  mirror_ThSk = document.getElementById("mirror_ThSk").checked;
+  mirror_HiCo = document.getElementById("mirror_HiCo").checked;
+  mirror_PrSt = document.getElementById("mirror_PrSt").checked;
+  mirror_FaFa = document.getElementById("mirror_FaFa").checked;
+  mirror_OlFa = document.getElementById("mirror_OlFa").checked;
+  mirror_DaFo = document.getElementById("mirror_DaFo").checked;
+  mirror_GoPr = document.getElementById("mirror_GoPr").checked;
+  mirror_GoLe = document.getElementById("mirror_GoLe").checked;
+  mirror_FaAu = document.getElementById("mirror_FaAu").checked;
+  mirror_FaPe = document.getElementById("mirror_FaPe").checked;
 }
 
 function getheatstatus() {
@@ -433,4 +489,95 @@ function cbgroup_companions() {
     document.getElementById("comp_fid").checked = true;
     document.getElementById("comp_ant").checked = true;
   }
+}
+
+function cbgroup_mirror() {
+  getcbstatus();
+  if (mirror_ShPr && mirror_FiPr && mirror_ChVi && mirror_DaRe && mirror_DeDe && mirror_StDe && mirror_GrRe && mirror_RuRe && mirror_BoBl && mirror_AbBl && mirror_InSo && mirror_StSo && mirror_DePo && mirror_GoTo && mirror_ThSk && mirror_HiCo && mirror_PrSt && mirror_FaFa && mirror_OlFa && mirror_DaFo && mirror_GoPr && mirror_GoLe && mirror_FaAu && mirror_FaPe) {
+    mirror_off();
+  } else {
+    document.getElementById("mirror_ShPr").checked = true;
+    document.getElementById("mirror_FiPr").checked = true;
+    document.getElementById("mirror_ChVi").checked = true;
+    document.getElementById("mirror_DaRe").checked = true;
+    document.getElementById("mirror_DeDe").checked = true;
+    document.getElementById("mirror_StDe").checked = true;
+    document.getElementById("mirror_GrRe").checked = true;
+    document.getElementById("mirror_RuRe").checked = true;
+    document.getElementById("mirror_BoBl").checked = true;
+    document.getElementById("mirror_AbBl").checked = true;
+    document.getElementById("mirror_InSo").checked = true;
+    document.getElementById("mirror_StSo").checked = true;
+    document.getElementById("mirror_DePo").checked = true;
+    document.getElementById("mirror_GoTo").checked = true;
+    document.getElementById("mirror_ThSk").checked = true;
+    document.getElementById("mirror_HiCo").checked = true;
+    document.getElementById("mirror_PrSt").checked = true;
+    document.getElementById("mirror_FaFa").checked = true;
+    document.getElementById("mirror_OlFa").checked = true;
+    document.getElementById("mirror_DaFo").checked = true;
+    document.getElementById("mirror_GoPr").checked = true;
+    document.getElementById("mirror_GoLe").checked = true;
+    document.getElementById("mirror_FaAu").checked = true;
+    document.getElementById("mirror_FaPe").checked = true;
+  }
+}
+
+function cbgroup_mirror_red() {
+  mirror_off();
+  document.getElementById("mirror_ShPr").checked = true;
+  document.getElementById("mirror_ChVi").checked = true;
+  document.getElementById("mirror_DeDe").checked = true;
+  document.getElementById("mirror_GrRe").checked = true;
+  document.getElementById("mirror_BoBl").checked = true;
+  document.getElementById("mirror_InSo").checked = true;
+  document.getElementById("mirror_DePo").checked = true;
+  document.getElementById("mirror_ThSk").checked = true;
+  document.getElementById("mirror_PrSt").checked = true;
+  document.getElementById("mirror_OlFa").checked = true;
+  document.getElementById("mirror_GoPr").checked = true;
+  document.getElementById("mirror_FaAu").checked = true;
+}
+
+function cbgroup_mirror_green() {
+  mirror_off();
+  document.getElementById("mirror_FiPr").checked = true;
+  document.getElementById("mirror_DaRe").checked = true;
+  document.getElementById("mirror_StDe").checked = true;
+  document.getElementById("mirror_RuRe").checked = true;
+  document.getElementById("mirror_AbBl").checked = true;
+  document.getElementById("mirror_StSo").checked = true;
+  document.getElementById("mirror_GoTo").checked = true;
+  document.getElementById("mirror_HiCo").checked = true;
+  document.getElementById("mirror_FaFa").checked = true;
+  document.getElementById("mirror_DaFo").checked = true;
+  document.getElementById("mirror_GoLe").checked = true;
+  document.getElementById("mirror_FaPe").checked = true;
+}
+
+function mirror_off() {
+  document.getElementById("mirror_ShPr").checked = false;
+  document.getElementById("mirror_FiPr").checked = false;
+  document.getElementById("mirror_ChVi").checked = false;
+  document.getElementById("mirror_DaRe").checked = false;
+  document.getElementById("mirror_DeDe").checked = false;
+  document.getElementById("mirror_StDe").checked = false;
+  document.getElementById("mirror_GrRe").checked = false;
+  document.getElementById("mirror_RuRe").checked = false;
+  document.getElementById("mirror_BoBl").checked = false;
+  document.getElementById("mirror_AbBl").checked = false;
+  document.getElementById("mirror_InSo").checked = false;
+  document.getElementById("mirror_StSo").checked = false;
+  document.getElementById("mirror_DePo").checked = false;
+  document.getElementById("mirror_GoTo").checked = false;
+  document.getElementById("mirror_ThSk").checked = false;
+  document.getElementById("mirror_HiCo").checked = false;
+  document.getElementById("mirror_PrSt").checked = false;
+  document.getElementById("mirror_FaFa").checked = false;
+  document.getElementById("mirror_OlFa").checked = false;
+  document.getElementById("mirror_DaFo").checked = false;
+  document.getElementById("mirror_GoPr").checked = false;
+  document.getElementById("mirror_GoLe").checked = false;
+  document.getElementById("mirror_FaAu").checked = false;
+  document.getElementById("mirror_FaPe").checked = false;
 }

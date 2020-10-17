@@ -25,6 +25,14 @@ body {
   width: 50%;
 }
 
+.mred {
+  color: darkred;
+}
+
+.mgreen {
+  color: darkseagreen;
+}
+
 @media screen and (max-width: 600px) {
   .column {
     width: 100%;
@@ -87,6 +95,25 @@ button:hover {
   opacity: 0;
   display: none;
 }
+
+#mirrorrankstile {
+  display: none;
+  position: relative;
+}
+#mirrorrankstile:checked ~ .hiddentext {
+  display: inline;
+  opacity: 1;
+}
+#mirrorrankstile ~ label > .arrow::after {
+  content: "Show...";
+  font-style: italic;
+  border: 1px dotted #eeeeee;
+  cursor: pointer;
+}
+#mirrorrankstile:checked ~ label > .arrow::after {
+  content: "Hide";
+}
+
 #pactrankstile {
   display: none;
   position: relative;
@@ -197,6 +224,24 @@ button:hover {
   float: right;
 }
 #heattile:checked ~ label > .arrow::after {
+  content: "-";
+  float: right;
+}
+
+/* heat tile */
+#mirrortile {
+  display: none;
+  position: relative;
+}
+#mirrortile:checked ~ .hiddentext {
+  display: block;
+  opacity: 1;
+}
+#mirrortile ~ label > .arrow::after {
+  content: "+";
+  float: right;
+}
+#mirrortile:checked ~ label > .arrow::after {
   content: "-";
   float: right;
 }
