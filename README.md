@@ -14,7 +14,7 @@ For each option in this tile, you can set the *maximum* number of times the rand
 
 ## Mirror of Night
 Choose which Mirror options you want the randomizer to choose from. If you choose neither option, the *escape parameters* tile will show 'none' for that row under *Mirror choices*.
-<br />The *arrow* button will toggle between checking all and none, preferring to select all. The *Red* button selects only the red side options; the *Green* button selects on the green side options.
+<br />The *arrow* button will toggle between checking all and none, preferring to select all. The *Red* button selects only the red side options; the *Green* button selects only the green side options.
 
 ## Infernal Arms
 Choose which Infernal Arms the randomizer will choose from. Currently, this will cause the *escape parameters* tile to show 'undefined' for the Infernal Arm row.
