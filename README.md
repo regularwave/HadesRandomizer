@@ -18,7 +18,7 @@ Choose which Mirror options you want the randomizer to choose from. If you choos
 <br />The *arrow* button will toggle between checking all and none, preferring to select all. The *Red* button selects only the red side options; the *Green* button selects only the green side options.
 
 ## Infernal Arms
-Choose which Infernal Arms the randomizer will choose from. Currently, this will cause the *escape parameters* tile to show 'undefined' for the Infernal Arm row.
+Choose which Infernal Arms the randomizer will choose from. Currently, choosing nothing will cause the *escape parameters* tile to show 'undefined' for the Infernal Arm row.
 <br />The *arrow* button will toggle between checking all and none, preferring to select all.
 
 ## Keepsakes
@@ -26,5 +26,5 @@ Choose which Keepsakes the randomizer will choose from. The function that choose
 <br />The *arrow* button will toggle between checking all and none, preferring to select all.
 
 ## Chthonic Companions
-Choose which companions the randomizer will choose from. Currently, this will cause the *escape parameters* tile to show 'undefined' for the Companion row.
+Choose which companions the randomizer will choose from. Currently, choosing nothing will cause the *escape parameters* tile to show 'undefined' for the Companion row.
 <br />The *arrow* button will toggle between checking all and none, preferring to select all.
