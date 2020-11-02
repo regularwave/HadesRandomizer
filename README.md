@@ -6,7 +6,7 @@ The **escape parameters** tile shows the random pick from amongst the *infernal 
 <br />By default, it selects from all options on load. The *Mirror choices* and *Pact rank order* lines are hidden because they can be very long, especially with *Verbose* mode enabled.
 
 ## Options
-The **options** tile includes buttons to check or uncheck everything in the randomizer. The **Verbose?** check box uses the full names for the displays in the *escape parameter* tile.
+The **options** tile includes buttons to check or uncheck everything in the randomizer. The **Verbose?** check box uses the full names for the displays in the *escape parameter* tile. The *Instructions* link goes to this readme.
 
 ## Pact of Punishment
 For each option in this tile, you can set the *maximum* number of times the randomizer will include that option in the *Pact rank order*. Never want to see *Extreme Measures 4*? Set that option to 3 and *Extreme Measures* will only ever show up three times.
