@@ -4,11 +4,19 @@ body {
   font-family: sans-serif;
 }
 
-.footer {
+footer {
   float: left;
   width: 100%;
   font-size: 0.6em;
   text-align: center;
+  color: #494949;
+}
+
+body a {
+  color: #f1f1f1;
+}
+
+footer a {
   color: #494949;
 }
 

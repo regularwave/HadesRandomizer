@@ -89,7 +89,6 @@ function randomize() {
   getcompanion = Math.floor(Math.random() * companion.length);
   document.getElementById("text_companion").innerHTML = companion[getcompanion];
 
-
   /*mslots rows are [red status, green status, red short, green short, red verbose, green verbose, " none"] */
   let mslots = [
     [mirror_ShPr, mirror_FiPr, " ShPr", " FiPr", " Shadow Presence", " Fiery Presence", " none"],
