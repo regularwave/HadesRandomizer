@@ -1,3 +1,6 @@
+const visCount = document.getElementById('visCount');
+updateSiteCounter();
+
 function randomize() {
 
   getcbstatus();
@@ -579,4 +582,12 @@ function mirror_off() {
   document.getElementById("mirror_GoLe").checked = false;
   document.getElementById("mirror_FaAu").checked = false;
   document.getElementById("mirror_FaPe").checked = false;
+}
+
+function updateSiteCounter() {
+  fetch('https://api.countapi.xyz/hit/regularwave_HadesRandomizer')
+      .then(response => response.json())
+      .then(response => {
+          visCount.innerHTML = response.value;
+      })
 }
