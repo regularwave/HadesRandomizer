@@ -11,7 +11,7 @@ The **options** tile includes buttons to check or uncheck everything in the rand
 ## Pact of Punishment
 For each option in this tile, you can set the *maximum* number of times the randomizer will include that option in the *Pact rank order*. Never want to see *Extreme Measures 4*? Set that option to 3 and *Extreme Measures* will only ever show up three times.
 <br />If you're looking to target a specific heat level, go down the list of ranks provided by the *Pact rank order* line in the *escape parameters* tile until you either reach the target heat level or would exceed it. If you would exceed it, skip the rank that would cause you to go over and choose the next one in the list (repeating until you hit your target heat).
-<br />The *Reset* button will return all that options to their maximum number of ranks. The *Zero* button will set them all to zero.
+<br />The *Reset* button will return all the options to their maximum number of ranks. The *Zero* button will set them all to zero.
 
 ## Mirror of Night
 Choose which Mirror options you want the randomizer to choose from. If you choose neither option, the *escape parameters* tile will show 'none' for that row under *Mirror choices*.
